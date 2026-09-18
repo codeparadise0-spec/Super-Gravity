@@ -1,0 +1,57 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "."
+      ],
+      "description": "Scoped filesystem access for AST-aware inspection, dependency mapping, and workspace file operations."
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "description": "GitHub integration for branches, commits, PR creation, diff reviews, and CI pipeline status checks."
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@executeautomation/playwright-mcp-server"
+      ],
+      "description": "Headless browser automation for automated E2E testing, responsive snapshot audits, and UI verification."
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ],
+      "description": "Chrome DevTools Protocol (CDP) browser automation, viewport emulation, console log inspection, and screenshot capture."
+    },
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://readonly_user:password@localhost:5432/app_db"
+      ],
+      "description": "Sandboxed read-only database introspection, query plan analysis (EXPLAIN ANALYZE), and schema inspection."
+    },
+    "fetch": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "description": "Fast web and documentation fetcher for up-to-date API references and specifications."
+    }
+  }
+}
